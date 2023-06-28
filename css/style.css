@@ -502,9 +502,10 @@ li {
   border: 1px solid var(--portfolio-button);
   padding: 12px 24px;
   border-radius: 4px;
-  transition-duration: 250ms;
-  transition-property: color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-block {
   padding: 32px 16px;
@@ -516,7 +517,8 @@ li {
   color: var(--white-color);
   background-color: var(--nav-color);
   border: 1px solid transparent;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 .section-portfolio {
   padding: 96px 0 120px 0;
@@ -543,6 +545,12 @@ li {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+}
+.card-li:hover,
+.card-li:focus {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 /*modal window*/
 .bagdrop {
@@ -593,8 +601,7 @@ li {
 }
 .icon-modal {
   align-items: center;
-
-  fill: currentColor;
+  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-buttom:hover,
 .modal-buttom:focus {
